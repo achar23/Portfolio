@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-enquiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Personal Portfolio Website</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/d5de2555f6.js" crossorigin="anonymous"></script>
+        
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <a href="#" class="logo">Manasa Acharya.</a>
+                    <ul id="sidemenu">
+                        <li><a href="#header">HOME</a></li>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#projects">PROJECTS</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                        <i class="fas fa-times" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fas fa-bars" onclick="openmenu()"></i>
+                </nav>
+                <div class="header-text">
+                    <p>Computer Science Graduate</p>
+                    <h1>Hi,I'am<br><span>Manasa Acharya</span><br> from Bangalore</h1>
+                </div>
+            </div>
+        </div>
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="about.jpeg">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>I have the flexibility to adapt to any new environment and work
+                            tirelessly on interesting projects. My vigor and skill will be a great
+                            strength for the company and i will make sure to bring success to
+                            all projects. Seeking for an opportunity to utilize whatever i have
+                            learnt as Computer Science Engineer.
+                            </p>
+
+                            <div class="tab-titles">
+                                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                                <p class="tab-links" onclick="opentab('education')">Education</p>
+                            </div>
+                            <div class="tab-contents active-tab" id="skills">
+                                <ul>
+                                    <li><span>Web Development</span><br>Web app Development</li>
+                                    <li><span>JAVA</span><br>Programming Language</li>
+                                    <li><span>CSS</span><br>Programming Language</li>
+                                    <li><span>Javascript</span><br>Programming Language</li>
+                                    <li><span>Python</span><br>Programming Language</li>
+                                    <li><span>MySQL</span><br>Database Management</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="experience">
+                                <ul>
+                                    <li><span>2022</span><br>Internship at Zephyr Technology Mangalore</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="education">
+                                <ul>
+                                    <li><span>2019-2023</span><br>BE-CSE at SJEC Mangalore</li>
+                                    <li><span>2017-209</span><br>Viveka PreUniversity College Kota</li>
+                                    <li><span>2016-2017</span><br>Viveka English Medium HighSchool Kota</li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="projects">
+            <div class="container">
+                <h1 class="subtitle">My Projects</h1>
+                <div class="project-list">
+                    <div>
+                        <i class="fa-solid fa-code"></i>
+                        <h2>Virtual Trial Room</h2>
+                        <p>Ideology behind this project was to try clothes on a device having a screen, camera and web browser.This application is implemented using Open CV and web camera to capture image.</p>
+                        <a href="#">Learn More</a><br><br>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-crop"></i>
+                        <h2>Caffe Management</h2>
+                        <p>This project is based on concept of ordering food items and generating total food cost.The user can make order by selecting from main menu.The feature of food order System display food along with price.</p>
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p>manasaacharya23@gmail.com</p>
+                        <p>8971521361</p><br>
+                        <a href="most recent resume.pdf" download class="btn btn2">Download CV</a><br><br>
+                    </div>
+                    <div class="contact-right"></div>
+                    <form>
+                        <input type="text" name="Name" placeholder="Enter Your Name">
+                        <input type="email" name="email" placeholder="Enter Email Address">
+                        <textarea name="Message" roes="6" placeholder="Your Message" ></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        <script>
+            var tablinks=document.getElementsByClassName("tab-links");
+            var tabcontents=document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+        </script>
+        <script>
+            var sidemenu=document.getElementById("sidemenu");
+            function openmenu(){
+                sidemenu.style.right="0";
+            }
+            function closemenu(){
+                sidemenu.style.right="-200px"
+            }
+        </script>
+
+    </body>
+</html>
